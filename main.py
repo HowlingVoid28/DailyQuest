@@ -164,7 +164,7 @@ class AnimatedButton(QPushButton):
 class MyWidget(QWidget):
     def __init__(self, parent=None):
         super(MyWidget, self).__init__(parent)
-        self.pixmap = QPixmap("anotherpro\Background.png")
+        self.pixmap = QPixmap(".\Background.png")
         image_size = self.pixmap.size()
          # Specify a maximum size for the image
         max_size = QSize(1500, 1500)  # Change this to your desired maximum size
