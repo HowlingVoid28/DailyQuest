@@ -252,8 +252,8 @@ class User:
         self.progress.setStyleSheet(stylesheet)
 
     def load_data(self):
-        if os.path.exists('anotherpro\data.pkl'):
-            with open('anotherpro\data.pkl', 'rb') as f:
+        if os.path.exists('.\data.pkl'):
+            with open('.\data.pkl', 'rb') as f:
                 data = pickle.load(f)
             self.tasks, self.exp, self.level = data
             for task in self.tasks:
@@ -262,7 +262,7 @@ class User:
             title = self.get_title()  # Get the title based on the current level
             self.level_label.setText(f"Level: {self.level} - {title}")  # Display the level and title
     def save_data(self):
-        with open('anotherpro\data.pkl', 'wb') as f:
+        with open('.\data.pkl', 'wb') as f:
             pickle.dump((self.tasks, self.exp, self.level), f)
 
     def add_task(self):
@@ -402,7 +402,7 @@ class User:
             self.start_image_animation()  # Start the animation
             self.old_title = title  # Update the current title
         title = self.get_title()
-        image_path = f"anotherpro/pic_title/{title}.png"  # load the image in the pic_title folder
+        image_path = f"./pic_title/{title}.png"  # load the image in the pic_title folder
         pixmap = QPixmap(image_path).scaled(100, 100, Qt.KeepAspectRatio)
         self.image_label.setPixmap(pixmap)
         self.image_label.setFixedSize(pixmap.size())
