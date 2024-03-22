@@ -422,7 +422,7 @@ window = MyWidget()
 window.setWindowTitle("Daily Quest v1.20 by Void")
 
 # Set the window icon
-window.setWindowIcon(QIcon('anotherpro\Logo.png'))
+window.setWindowIcon(QIcon('.\Logo.png'))
 
 layout = QVBoxLayout()
 
